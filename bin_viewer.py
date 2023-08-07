@@ -15,7 +15,7 @@ def read_bin_velodyne(path):
 
 
 def main():
-    pc_path = "/home/stannyho/Downloads/000000.bin"
+    pc_path = "/media/stannyho/ssd/Pseudo_Lidar_V2/results/predicted/prediction_d_3.bin"
     # example=read_bin_velodyne(pc_path)
     example = np.fromfile(pc_path, dtype=np.float32, count=-1).reshape(-1, 4)
     example_xyz = example[:, :3]
